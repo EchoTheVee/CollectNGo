@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float gravity;
     public float dashSpeed;
     private float playerHeight;
+    public GameObject playerCam;
 
 
     private void Start()
@@ -27,12 +28,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.rotation = playerCam.transform.rotation;
 
         //Horizontal Movement
         horizontalInput = Input.GetAxis("Horizontal");
         //rb.AddRelativeForce(Vector3.right * moveSpeed * horizontalInput, ForceMode.Force);
-        transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime);
+        //transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime);
 
         //Vertical Movement
         verticalInput = Input.GetAxis("Vertical");
