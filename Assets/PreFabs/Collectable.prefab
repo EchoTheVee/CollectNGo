@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1671256650076120069}
   - component: {fileID: 2124975141}
   - component: {fileID: 2124975140}
+  - component: {fileID: 2124975142}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!65 &2124975140
@@ -114,3 +115,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9796429, y: 6, z: 1.9594929}
   m_Center: {x: 0, y: 0, z: -0.02025354}
+--- !u!114 &2124975142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878627858084546000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9909a1a702fcc429638c05383c23ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
