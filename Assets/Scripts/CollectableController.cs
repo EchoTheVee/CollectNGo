@@ -23,7 +23,10 @@ public class CollectableController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             gm.collectablesGotten += 1;
+            GameObject.Find("CollectableManager").GetComponent<CollectableManager>().UpdateCount();
             Destroy(gameObject);
         }
+
+
     }
 }

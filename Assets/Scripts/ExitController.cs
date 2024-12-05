@@ -8,10 +8,12 @@ public class ExitController : MonoBehaviour
     public Material locked;
     public Material unlocked;
     public GameManager gm;
+    public CollectableManager cm;
 
     // Start is called before the first frame update
     void Start()
     {
+        cm = GameObject.Find("CollectableManager").GetComponent<CollectableManager>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         mr.material = locked;
     }
@@ -19,9 +21,13 @@ public class ExitController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (cm.numberOfPlumbobs <= 0)
         {
             mr.material = unlocked;
+        }
+        else
+        {
+            mr.material = locked;
         }
     }
 }
