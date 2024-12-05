@@ -29,5 +29,21 @@ public class ExitController : MonoBehaviour
         {
             mr.material = locked;
         }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (mr.material = unlocked)
+        {
+
+            NextLevelTP();
+
+        }        
+    }
+
+    public void NextLevelTP()
+    {
+        Debug.Log("NextLevel");
     }
 }
