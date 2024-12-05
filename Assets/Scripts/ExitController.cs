@@ -9,6 +9,8 @@ public class ExitController : MonoBehaviour
     public Material unlocked;
     public GameManager gm;
     public CollectableManager cm;
+    public GameObject levelOneSpawn;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +47,6 @@ public class ExitController : MonoBehaviour
     public void NextLevelTP()
     {
         Debug.Log("NextLevel");
+        player.transform.position = levelOneSpawn.transform.position;
     }
 }
