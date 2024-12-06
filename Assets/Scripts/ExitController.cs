@@ -11,11 +11,17 @@ public class ExitController : MonoBehaviour
     public CollectableManager cm;
     public GameObject levelOneSpawn;
     public GameObject player;
-    public GameObject[] nextPlumbob;
+    public GameObject plumbob1;
+    public GameObject plumbob2;
+    public GameObject plumbob3;
+    public GameObject plumbob4;
+    public GameObject plumbob5;
+    public Clock clock;
 
     // Start is called before the first frame update
     void Start()
     {
+        clock = GameObject.Find("Clock").GetComponent<Clock>();
         cm = GameObject.Find("CollectableManager").GetComponent<CollectableManager>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         mr.material = locked;
@@ -49,5 +55,13 @@ public class ExitController : MonoBehaviour
     {
         Debug.Log("NextLevel");
         player.transform.position = levelOneSpawn.transform.position;
+        plumbob1.SetActive(true);
+        plumbob2.SetActive(true);
+        plumbob3.SetActive(true);
+        plumbob4.SetActive(true);
+        plumbob5.SetActive(true);
+        cm.UpdateCount();
+        clock.startTime = 120;
+        clock.time = 120;
     }
 }

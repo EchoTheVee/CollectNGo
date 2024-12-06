@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Clock : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class Clock : MonoBehaviour
     {
         isRunning = false;
         Debug.Log("Timer Done :3");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void UpdateDisplay()
