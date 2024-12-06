@@ -11,6 +11,7 @@ public class ExitController : MonoBehaviour
     public CollectableManager cm;
     public GameObject levelOneSpawn;
     public GameObject player;
+    public GameObject[] nextPlumbob;
 
     // Start is called before the first frame update
     void Start()
